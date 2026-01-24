@@ -18,3 +18,35 @@ RUN LOCALLY:
   cd slides && bun install && bun --hot src/index.ts
 
 STACK: bun, react 19, tailwind, motion
+
+
+HOW THIS WAS MADE:
+
+1. voice recording
+   raw stream of consciousness in russian
+   just talked through ideas into the mic
+   -> first-thoughts-rec-ru-raw.md
+
+2. ai cleanup
+   fed the transcript to claude
+   got a structured draft back
+   -> first-thoughts-cleaned.md
+
+3. outline
+   detailed slide-by-slide breakdown
+   timings, slide types, demo ideas
+   -> presentation-outline.md
+
+4. practice run
+   recorded myself going through slides
+   noted what to change
+   -> progon.md
+
+5. vibe coded slides
+   told claude what i wanted
+   it wrote react components with animations
+   iterated until it looked right
+   -> slides/
+
+the whole thing is a talk about vibe coding
+made with vibe coding
