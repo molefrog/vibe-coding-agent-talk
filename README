@@ -1,0 +1,20 @@
+ ██▒   █▓ ██▓ ▄▄▄▄   ▓█████      ▄████▄   ▒█████  ▓█████▄ ▓█████
+▓██░   █▒▓██▒▓█████▄ ▓█   ▀     ▒██▀ ▀█  ▒██▒  ██▒▒██▀ ██▌▓█   ▀
+ ▓██  █▒░▒██▒▒██▒ ▄██▒███       ▒▓█    ▄ ▒██░  ██▒░██   █▌▒███
+  ▒██ █░░░██░▒██░█▀  ▒▓█  ▄     ▒▓▓▄ ▄██▒▒██   ██░░▓█▄   ▌▒▓█  ▄
+   ▒▀█░  ░██░░▓█  ▀█▓░▒████▒    ▒ ▓███▀ ░░ ████▓▒░░▒████▓ ░▒████▒
+   ░ ▐░  ░▓  ░▒▓███▀▒░░ ▒░ ░    ░ ░▒ ▒  ░░ ▒░▒░▒░  ▒▒▓  ▒ ░░ ▒░ ░
+   ░ ░░   ▒ ░▒░▒   ░  ░ ░  ░      ░  ▒     ░ ▒ ▒░  ░ ▒  ▒  ░ ░  ░
+     ░░   ▒ ░ ░    ░    ░       ░        ░ ░ ░ ▒   ░ ░  ░    ░
+      ░   ░   ░         ░  ░    ░ ░          ░ ░     ░       ░  ░
+     ░             ░            ░                  ░
+
+Building your own AI coding agent from scratch.
+CopenhagenJS talk by @mlfrg, Jan 2026.
+
+LIVE: https://vibe-coding-agent-talk.vercel.app
+
+RUN LOCALLY:
+  cd slides && bun install && bun --hot src/index.ts
+
+STACK: bun, react 19, tailwind, motion
