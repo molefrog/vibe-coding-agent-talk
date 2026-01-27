@@ -117,14 +117,14 @@ export default function App() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
-              className="text-xl text-light uppercase tracking-[0.12em]"
+              className="text-lg text-primary uppercase tracking-[0.12em] bg-bg px-2 py-1 -mx-2 -my-1 rounded-sm"
             >
               {chapterDisplay}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-      <div className="fixed bottom-6 right-6 text-sm text-gray">
+      <div className="fixed bottom-6 right-6 text-sm text-muted bg-bg px-2 py-1 rounded-sm">
         {displayNumber} / {allSlides.length}
       </div>
     </div>

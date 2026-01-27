@@ -1,12 +1,8 @@
 import type { ReactNode, ComponentType } from "react";
 import { slides as intro } from "./00-intro";
-import { slides as agent } from "./01-agent";
-import { slides as filesystem } from "./02-filesystem";
-import { slides as build } from "./03-build";
-import { slides as feedback } from "./04-feedback";
-import { slides as recap } from "./05-recap";
-import { slides as demo } from "./06-demo";
-import { slides as conclusion } from "./07-conclusion";
+import { slides as conclusions } from "./01-conclusions";
+import { slides as space } from "./02-space";
+import { slides as finale } from "./07-conclusion";
 
 // Slide can be:
 // - string: simple text
@@ -57,13 +53,9 @@ export type Section = {
 
 export const sections: Section[] = [
   { name: "intro", slides: intro },
-  { name: "agent", chapter: "Agent", slides: agent },
-  { name: "filesystem", chapter: "File System", slides: filesystem },
-  { name: "build", chapter: "Build + Preview", slides: build },
-  { name: "feedback", chapter: "Feedback", slides: feedback },
-  { name: "recap", chapter: "Recap", slides: recap },
-  { name: "demo", chapter: "Demo", slides: demo },
-  { name: "conclusion", slides: conclusion },
+  { name: "conclusions", slides: conclusions },
+  { name: "space", slides: space },
+  { name: "finale", slides: finale },
 ];
 
 // Get chapter and slide title for a slide index
