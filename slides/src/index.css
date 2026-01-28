@@ -5,10 +5,18 @@
   --color-dark: #18181A;
   --color-primary: #211F1E;
   --color-muted: #8F8D8A;
+  --color-secondary: #757470;
   --color-brand: #3756F2;
   --color-border: #DBDBDB;
 
   --font-mono: 'Berkeley Mono', monospace;
+
+  --shadow-menu: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.02),
+    0px 4px 8px -4px rgba(0, 0, 0, 0.04), 0px 16px 24px -8px rgba(0, 0, 0, 0.06);
+  --shadow-modal: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.02),
+    0px 8px 16px -4px rgba(0, 0, 0, 0.04), 0px 24px 32px -8px rgba(0, 0, 0, 0.06);
+  --shadow-fullscreen: 0 0 0 1px rgba(0, 0, 0, 0.08), 0px 1px 1px rgba(0, 0, 0, 0.02),
+    0px 8px 16px -4px rgba(0, 0, 0, 0.04), 0px 24px 32px -8px rgba(0, 0, 0, 0.06);
 }
 
 @font-face {

@@ -1,7 +1,13 @@
 import { useEffect } from "react";
 import { useRoute, useLocation } from "wouter";
 import { motion, AnimatePresence } from "motion/react";
-import { allSlides, isSteppedSlide, getSlideSteps, getChapterForSlide, unwrapSlide } from "./slides";
+import {
+  allSlides,
+  isSteppedSlide,
+  getSlideSteps,
+  getChapterForSlide,
+  unwrapSlide,
+} from "./slides";
 
 // Parse URL: "3" -> { slide: 3, step: 1 }, "3-2" -> { slide: 3, step: 2 }
 function parseSlideUrl(param: string): { slide: number; step: number } {
@@ -24,9 +30,7 @@ export default function App() {
   const [match, params] = useRoute("/:slide");
 
   // Parse current location
-  const { slide: slideNum, step } = match
-    ? parseSlideUrl(params.slide)
-    : { slide: 1, step: 1 };
+  const { slide: slideNum, step } = match ? parseSlideUrl(params.slide) : { slide: 1, step: 1 };
 
   const slideIndex = Math.max(0, Math.min(slideNum - 1, allSlides.length - 1));
   const currentSlide = allSlides[slideIndex];
@@ -76,11 +80,7 @@ export default function App() {
     const slide = unwrapSlide(currentSlide);
 
     if (typeof slide === "string") {
-      return (
-        <pre className="text-xl whitespace-pre-wrap text-center max-w-5xl">
-          {slide}
-        </pre>
-      );
+      return <pre className="text-xl whitespace-pre-wrap text-center max-w-5xl">{slide}</pre>;
     }
 
     if (isSteppedSlide(slide)) {
@@ -101,14 +101,12 @@ export default function App() {
   const { chapter, title } = getChapterForSlide(slideIndex);
 
   // Build chapter display: "Chapter: Title" or just "Chapter" or just "Title"
-  const chapterDisplay = chapter && title
-    ? `${chapter}: ${title}`
-    : chapter || title;
+  const chapterDisplay = chapter && title ? `${chapter}: ${title}` : chapter || title;
 
   return (
     <div className="h-screen w-screen flex flex-col items-center justify-center p-16">
       {renderSlide()}
-      <div className="fixed bottom-6 left-6 h-8 overflow-hidden">
+      <div className="fixed bottom-6 left-8 h-8 overflow-hidden">
         <AnimatePresence mode="popLayout">
           {chapterDisplay && (
             <motion.div
@@ -117,14 +115,14 @@ export default function App() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -20, opacity: 0 }}
               transition={{ type: "spring", stiffness: 400, damping: 30 }}
-              className="text-lg text-primary uppercase tracking-[0.12em] bg-bg px-2 py-1 -mx-2 -my-1 rounded-sm"
+              className="text-xl text-primary uppercase tracking-[0.12em] bg-bg px-2 py-1 -mx-2 -my-1 rounded-sm"
             >
               {chapterDisplay}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-      <div className="fixed bottom-6 right-6 text-sm text-muted bg-bg px-2 py-1 rounded-sm">
+      <div className="fixed bottom-6 right-6 text-base text-muted bg-bg px-2 py-1 rounded-sm">
         {displayNumber} / {allSlides.length}
       </div>
     </div>

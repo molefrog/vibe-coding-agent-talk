@@ -2,6 +2,14 @@ import type { ReactNode, ComponentType } from "react";
 import { slides as intro } from "./00-intro";
 import { slides as conclusions } from "./01-conclusions";
 import { slides as space } from "./02-space";
+import { slides as talk } from "./03-talk";
+import { slides as stuart } from "./03b-stuart";
+import { slides as pidnn } from "./03c-pidnn";
+import { slides as animations } from "./03d-animations";
+import { slides as mdx } from "./04-mdx";
+import { slides as domik } from "./04b-domik";
+import { slides as files } from "./05-files";
+import { slides as preview } from "./06-preview";
 import { slides as finale } from "./07-conclusion";
 
 // Slide can be:
@@ -55,6 +63,14 @@ export const sections: Section[] = [
   { name: "intro", slides: intro },
   { name: "conclusions", slides: conclusions },
   { name: "space", slides: space },
+  { name: "talk", slides: talk },
+  { name: "stuart", slides: stuart },
+  { name: "pidnn", slides: pidnn },
+  { name: "animations", slides: animations },
+  { name: "mdx", slides: mdx },
+  { name: "domik", slides: domik },
+  { name: "files", slides: files },
+  { name: "preview", slides: preview },
   { name: "finale", slides: finale },
 ];
 
