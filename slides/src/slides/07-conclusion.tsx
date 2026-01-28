@@ -9,7 +9,7 @@ const FinalSlide = () => (
     <div className="flex flex-col w-full max-w-sm">
       <div className="py-3 border-b border-border">
         <h2 className="text-lg text-primary uppercase tracking-[0.1em] mb-2">
-          Building AI Coding Agents
+          Unnamed Talk for Design Engineering Night #6
         </h2>
         <p className="text-secondary text-base">
           Alexey Taktarov

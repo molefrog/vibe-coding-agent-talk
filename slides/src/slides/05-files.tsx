@@ -27,6 +27,8 @@ const fileTree: FileItem[] = [
       { name: "play-sounds-with-use-sound.md" },
       { name: "animate-numbers-with-number-flow.md" },
       { name: "spoiler-reveal-effects.md" },
+      { name: "color-picker-with-react-colorful.md" },
+      { name: "device-motion-and-shake.md" },
     ],
   },
   { name: "app.tsx" },
@@ -76,8 +78,8 @@ const FileEntry = ({
   );
 };
 
-// Total lines when fully expanded: 19
-const TOTAL_LINES = 19;
+// Total lines when fully expanded: 21
+const TOTAL_LINES = 21;
 const LINE_HEIGHT = 32; // py-1 (8px) + text-base line height (~24px)
 
 const FilesSlide = () => {
