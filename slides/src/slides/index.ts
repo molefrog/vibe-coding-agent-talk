@@ -11,6 +11,8 @@ import { slides as domik } from "./04b-domik";
 import { slides as files } from "./05-files";
 import { slides as preview } from "./06-preview";
 import { slides as finale } from "./07-conclusion";
+import { slides as principles } from "./08-principles";
+import { slides as ficus } from "./06b-ficus";
 
 // Slide can be:
 // - string: simple text
@@ -62,15 +64,17 @@ export type Section = {
 export const sections: Section[] = [
   { name: "intro", slides: intro },
   { name: "conclusions", slides: conclusions },
-  { name: "space", slides: space },
   { name: "talk", slides: talk },
   { name: "stuart", slides: stuart },
   { name: "pidnn", slides: pidnn },
   { name: "animations", slides: animations },
   { name: "mdx", slides: mdx },
   { name: "domik", slides: domik },
-  { name: "files", slides: files },
   { name: "preview", slides: preview },
+  { name: "space", slides: space },
+  { name: "ficus", slides: ficus },
+  { name: "files", slides: files },
+  { name: "principles", slides: principles },
   { name: "finale", slides: finale },
 ];
 

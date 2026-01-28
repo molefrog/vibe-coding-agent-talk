@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { RevealText } from "../components/RevealText";
 
 const conclusions = [
   {
@@ -16,24 +16,27 @@ const ConclusionsSlide = ({ step }: { step: number }) => (
     <div className="w-full max-w-lg flex flex-col gap-8">
       <div className="flex gap-4">
         <span className="text-base invisible">01</span>
-        <span className="text-muted text-lg uppercase tracking-[0.15em]">Conclusions</span>
+        <span className="text-muted text-lg uppercase tracking-[0.15em]">
+          <RevealText visible={step >= 1} initialVisible={false}>
+            Conclusions
+          </RevealText>
+        </span>
       </div>
 
       <div className="flex flex-col gap-6">
         {conclusions.map((item, i) => (
-          <motion.div
-            key={item.number}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{
-              opacity: step > i ? 1 : 0,
-              y: step > i ? 0 : 10,
-            }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="flex gap-4"
-          >
-            <span className="text-muted text-base">{item.number}</span>
-            <p className="text-primary text-base">{item.text}</p>
-          </motion.div>
+          <div key={item.number} className="flex gap-4">
+            <span className="text-muted text-base">
+              <RevealText visible={step >= i + 2} initialVisible={false}>
+                {item.number}
+              </RevealText>
+            </span>
+            <p className="text-primary text-base">
+              <RevealText visible={step >= i + 2} initialVisible={false} stagger={15}>
+                {item.text}
+              </RevealText>
+            </p>
+          </div>
         ))}
       </div>
     </div>
@@ -41,5 +44,5 @@ const ConclusionsSlide = ({ step }: { step: number }) => (
 );
 
 export const slides = [
-  { slide: { component: ConclusionsSlide, steps: 2 }, title: "Conclusions" },
+  { slide: { component: ConclusionsSlide, steps: 3 }, title: "Conclusions" },
 ];

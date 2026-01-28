@@ -1,4 +1,4 @@
-import domikVideo from "../assets/domik.m4v";
+import domikVideo from "../assets/domik-twi.webm";
 
 const DomikSlide = () => (
   <div className="flex flex-col items-center justify-center h-full">

@@ -9,17 +9,24 @@ const fileTree: FileItem[] = [
   {
     name: "node_modules/",
     children: [
-      { name: "react/" },
-      { name: "@instantdb/react/" },
       { name: "motion/" },
-      { name: "tailwindcss/" },
+      { name: "@instantdb/" },
+      { name: "@heroicons/" },
+      { name: "canvas-confetti/" },
+      { name: "use-sound/" },
+      { name: "@number-flow/" },
     ],
   },
   {
     name: "docs/",
     children: [
-      { name: "heroicons.md" },
+      { name: "design-guidelines.md" },
       { name: "instantdb.md" },
+      { name: "heroicons.md" },
+      { name: "confetti-effects.md" },
+      { name: "play-sounds-with-use-sound.md" },
+      { name: "animate-numbers-with-number-flow.md" },
+      { name: "spoiler-reveal-effects.md" },
     ],
   },
   { name: "app.tsx" },
@@ -40,18 +47,22 @@ const FileEntry = ({
   onToggle?: () => void;
 }) => {
   const hasChildren = item.children && item.children.length > 0;
-  const isFolder = item.name.endsWith("/");
 
   return (
     <>
       <div
         className={`
           py-1 px-2 -mx-2 rounded-sm transition-colors
-          ${hasChildren ? "cursor-pointer hover:bg-border" : ""}
+          ${hasChildren ? "cursor-pointer hover:bg-border" : "cursor-default hover:bg-border/50"}
         `}
         style={{ paddingLeft: `${depth * 24 + 8}px` }}
         onClick={onToggle}
       >
+        {hasChildren && (
+          <span className="inline-block w-4 text-muted">
+            {expanded ? "−" : "+"}
+          </span>
+        )}
         {item.name}
       </div>
       {hasChildren && expanded && (
@@ -65,8 +76,8 @@ const FileEntry = ({
   );
 };
 
-// Total lines when fully expanded: 12
-const TOTAL_LINES = 12;
+// Total lines when fully expanded: 19
+const TOTAL_LINES = 19;
 const LINE_HEIGHT = 32; // py-1 (8px) + text-base line height (~24px)
 
 const FilesSlide = () => {
