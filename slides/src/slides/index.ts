@@ -13,6 +13,8 @@ import { slides as preview } from "./06-preview";
 import { slides as finale } from "./07-conclusion";
 import { slides as principles } from "./08-principles";
 import { slides as ficus } from "./06b-ficus";
+import { slides as agents } from "./04c-agents";
+import { slides as lego } from "./04a-lego";
 
 // Slide can be:
 // - string: simple text
@@ -68,8 +70,10 @@ export const sections: Section[] = [
   { name: "stuart", slides: stuart },
   { name: "pidnn", slides: pidnn },
   { name: "animations", slides: animations },
+  { name: "lego", slides: lego },
   { name: "mdx", slides: mdx },
   { name: "domik", slides: domik },
+  { name: "agents", slides: agents },
   { name: "preview", slides: preview },
   { name: "space", slides: space },
   { name: "ficus", slides: ficus },
